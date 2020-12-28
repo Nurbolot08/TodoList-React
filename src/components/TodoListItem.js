@@ -11,7 +11,6 @@ const TodoListItem = ({todo, deleteTodo,updateTodo,doneTodo}) => {
         textDecoration: 'line-through'
     }
     return (
-        <div>
             <li className="list-group-item d-flex justify-content-between align-items-center">
                 { editable ? <input type="text" value={updated} onChange={e => setUpdated(e.target.value)}/> :
                 <h4 style={todo.done ? isDoneStyle : null} onClick={() => doneTodo(todo.id)}>{todo.title}</h4>
@@ -23,12 +22,11 @@ const TodoListItem = ({todo, deleteTodo,updateTodo,doneTodo}) => {
                     >{ editable ? 'Save' : 'Edit' }</button>
                     <button
                         className="btn btn-danger"
-                        onClick={ () => deleteTodo(todo.id) }
-                    >Del</button>
+                        onClick={() => deleteTodo(todo.id)}>
+                        Del
+                    </button>
                 </div>
             </li>
-
-        </div>
     );
 };
 

@@ -33,7 +33,7 @@ const TodoList = () => {
     }
 
     return (
-        <div>
+        <div className="section">
             <TodoTitle todos={ todos }/>
             <ul className="list-group mb-5">
                 {
